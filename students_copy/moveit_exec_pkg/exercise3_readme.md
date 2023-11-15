@@ -9,7 +9,7 @@ There are three objectives to this exercise
 
 Let's first open the executable to be edited for this exercise
 
-![Folder_img](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/moveit_exe_folder_structure.png)
+![Folder_img](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/moveit_exe_folder_structure.png)
 
 
 
@@ -33,7 +33,7 @@ For this exercise,
 
 Please refer to the template below to understand where editings are needed
 
-![Pose Goal Template](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/pose_goal_template.png)
+![Pose Goal Template](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/pose_goal_template.png)
 
 ### Terminal 1: [Launch Move Group: Move Group will be ready to accept motion plan requests and obstacle additions]
 ```
@@ -59,7 +59,7 @@ ros2 launch panda_moveit_config moveit_rviz.launch.py
 
 Now you should see the below window opened which loads motion planning toolbox, robot model based on robot state publisher information
 
-![Rviz](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/rviz_moveit.png)
+![Rviz](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/rviz_moveit.png)
 
 
 ### Terminal 4: [Launch Moveit Interface: Calls Moveit group with motion plan and collision requests]
@@ -82,7 +82,7 @@ Now you should notice the robot planning (Note: not moving) from current pose to
 
 Please refer to the template below to understand where editings are needed
 
-![Add Collision Template](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/add_collision_template.png)
+![Add Collision Template](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/add_collision_template.png)
 
 
 Please copy below contents to **"Code: add collision objects section here"** 
@@ -166,7 +166,7 @@ Now you should notice the robot planning (Note: not moving) from current pose to
 
 Please refer to the template below to understand where editings are needed
 
-![Add Joint Goal Template](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/joint_goal_template.png)
+![Add Joint Goal Template](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/joint_goal_template.png)
 
 
 Please copy below contents to **"Code: Add Joint Goal section here"** 
@@ -217,7 +217,7 @@ ros2 launch panda_moveit_config moveit_rviz.launch.py
 
 Now you should see the below window opened which loads motion planning toolbox, robot model based on robot state publisher information
 
-![Rviz](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/rviz_moveit.png)
+![Rviz](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/rviz_moveit.png)
 
 
 ### Terminal 4: [Launch Moveit Interface: Calls Moveit group with motion plan and collision requests]

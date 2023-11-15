@@ -37,7 +37,8 @@ Once done, now it is time to visualize your robot description file in RViz.
 Before visualizing, you should build and source to visualize the changes. 
 
 ```
-cd ~/day1_ws
+docker compose run shell
+cd day1_ws
 colcon build --packages-select arm_urdf_pkg
 source install/setup.bash
 ros2 launch arm_urdf_pkg robot_arm_visual.launch.py
@@ -80,7 +81,8 @@ Once done, now it is time to visualize your robot description file in RViz.
 Before visualizing, you should build and source to visualize the changes. 
 
 ```
-cd ~/day1_ws
+docker compose run shell
+cd day1_ws
 colcon build --packages-select arm_urdf_pkg
 source install/setup.bash
 ros2 launch arm_urdf_pkg robot_arm_visual.launch.py

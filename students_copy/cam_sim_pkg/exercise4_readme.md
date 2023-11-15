@@ -9,7 +9,7 @@ There are three objectives to this exercise
 
 Let's first open the executable to be edited for this exercise
 
-![Folder_img](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/cam_sim_structure.png)
+![Folder_img](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/cam_sim_structure.png)
 
 
 ### Objective 1: Add Camera Plugin in Gazebo Xacro file
@@ -22,7 +22,7 @@ code cam_sim_pkg/urdf/panda_gazebo.xacro
 ```
 #### Gazebo Structure for Camera Plugin
 
-![gazebo_struc](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/cam_sim_urdf_xacro.png)
+![gazebo_struc](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/cam_sim_urdf_xacro.png)
 
 
 Add the below gazebo tag to the template (panda_gazebo.xacro) based on above gazebo structure reference
@@ -65,7 +65,7 @@ Add the below gazebo tag to the template (panda_gazebo.xacro) based on above gaz
 Add above tag to the below section in panda_gazebo.xacro code
 
 
-![add_tag](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/gazebo_add_tag.png)
+![add_tag](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/gazebo_add_tag.png)
 
 
 ### Objective 2: Include Gazebo Xacro in URDF Xacro file
@@ -84,7 +84,7 @@ Edit the below section of the code with
   * Panda Gazebo Xacro File name
 
 
-![include_tag](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/camera_link_include_gazebo_xacro.png)
+![include_tag](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/camera_link_include_gazebo_xacro.png)
 
 
 ### Objective 3.1: Visualize 3D Pointcloud
@@ -116,7 +116,7 @@ ros2 launch cam_sim_pkg panda_cam_sim.launch.py
 
 Now you should see the window similar to the image below
 
-![gazebo](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/gazebo_depth.png)
+![gazebo](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/gazebo_depth.png)
 
 
 ##### Terminal 2 [Run Joint Commands: Publish Joint Commands to keep the robot arm in zero position] 
@@ -139,28 +139,28 @@ rviz2
 
 Select "world' as fixed frame in RViz
 
-![frame](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/world_frame_selection.png)
+![frame](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/world_frame_selection.png)
 
 Load Robot Model in RViz window
 
 Click "Add" in Displays Tab and select "RobotModel" from "By Display Type"
 
-![toolselect](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/robotmodel_tool_selection.png)
+![toolselect](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/robotmodel_tool_selection.png)
 
 Select "Description Topic" from added RobotModel
 
-![topicselect](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/robot_desc_topic_selection.png)
+![topicselect](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/robot_desc_topic_selection.png)
 
 
 ##### Now Visualize Point Cloud
 
 Click "Add" in Displays Tab and select "/points/PointCloud2" from "By Topic"
 
-![pcselect](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/pointcloud_selection.png)
+![pcselect](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/pointcloud_selection.png)
 
 Now you should see the point cloud similar to the window below
 
-![pointcloud](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/pointcloud_image.png)
+![pointcloud](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/pointcloud_image.png)
 
 
 
@@ -187,7 +187,7 @@ ros2 launch cam_sim_pkg panda_cam_sim.launch.py
 
 Now you should see the window similar to the image below
 
-![gazebo](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/gazebo_camera.png)
+![gazebo](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/gazebo_camera.png)
 
 
 ##### Terminal 2 [Run Joint Commands: Publish Joint Commands to keep the robot arm in zero position] 
@@ -210,28 +210,28 @@ rviz2
 
 Select "world' as fixed frame in RViz
 
-![frame](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/world_frame_selection.png)
+![frame](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/world_frame_selection.png)
 
 Load Robot Model in RViz window
 
 Click "Add" in Displays Tab and select "RobotModel" from "By Display Type"
 
-![toolselect](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/robotmodel_tool_selection.png)
+![toolselect](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/robotmodel_tool_selection.png)
 
 Select "Description Topic" from added RobotModel
 
-![topicselect](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/robot_desc_topic_selection.png)
+![topicselect](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/robot_desc_topic_selection.png)
 
 
 ##### Now Visualize 2D Image
 
 Click "Add" in Displays Tab and select "/my_camera/image_raw/Image" from "By Topic"
 
-![pcselect](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/image_selection.png)
+![pcselect](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/image_selection.png)
 
 Now you should see the window similar to the image below
 
-![image](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/2d_image_rviz.png)
+![image](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/2d_image_rviz.png)
 
 
 

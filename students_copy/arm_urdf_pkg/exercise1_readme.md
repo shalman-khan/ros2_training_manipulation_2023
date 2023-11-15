@@ -5,7 +5,7 @@ There are two objectives to this exercise
 1) Add the right joint for the gripper and visualize the robot arm in RViz
 2) Add a table, camera and visualize in RViz
    
-![Exercise1](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/Exercise1_image1.png)
+![Exercise1](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/Exercise1_image1.png)
 
 <br>
 
@@ -25,11 +25,11 @@ code arm_urdf_pkg/urdf/panda.urdf
 
 Now you should notice a urdf file similar to the one shown below
 
-![Urdf_img](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/urdf_file_image.png)
+![Urdf_img](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/urdf_file_image.png)
 
 Move to the **<panda_finger_joint1>** and **<panda_finger_joint2>** tags
 
-![Identify_joint](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/joint_type.png)
+![Identify_joint](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/joint_type.png)
 
 Identify the joint type for the **Finger Gripper Joints**.
 
@@ -45,7 +45,7 @@ ros2 launch arm_urdf_pkg robot_arm_visual.launch.py
 
 Now you should be able to see the robot similar to the image below
 
-![Identify_joint](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/first_viz.png)
+![Identify_joint](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/first_viz.png)
 
 Change fixed frame to **"panda_link0"**
 
@@ -91,6 +91,6 @@ Note: Change fixed frame to **"table"**
 
 Now you should be able to see the robot scene similar to the image below
 
-![Exercise1](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/Exercise1_image1.png)
+![Exercise1](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/Exercise1_image1.png)
 
 

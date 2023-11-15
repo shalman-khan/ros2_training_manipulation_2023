@@ -5,7 +5,7 @@ There are two objectives to this exercise
 1) Add the right joint for the gripper and visualize the robot arm in RViz
 2) Add a table, camera and visualize in RViz
    
-![Exercise1](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/Exercise1_image1.png)
+![Exercise1](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/Exercise1_image1.png)
 
 <br>
 
@@ -25,11 +25,11 @@ code arm_urdf_pkg/urdf/panda.urdf
 
 Now you should notice a urdf file similar to the one shown below
 
-![Urdf_img](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/urdf_file_image.png)
+![Urdf_img](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/urdf_file_image.png)
 
 Move to the **<panda_finger_joint1>** and **<panda_finger_joint2>** tags
 
-![Identify_joint](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/joint_type.png)
+![Identify_joint](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/joint_type.png)
 
 Identify the joint type for the **Finger Gripper Joints**.
 
@@ -45,7 +45,7 @@ ros2 launch arm_urdf_pkg robot_arm_visual.launch.py
 
 Now you should be able to see the robot similar to the image below
 
-![Identify_joint](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/first_viz.png)
+![Identify_joint](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/first_viz.png)
 
 Change fixed frame to **"panda_link0"**
 
@@ -91,7 +91,7 @@ Note: Change fixed frame to **"table"**
 
 Now you should be able to see the robot scene similar to the image below
 
-![Exercise1](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/Exercise1_image1.png)
+![Exercise1](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/Exercise1_image1.png)
 
 
 <br>
@@ -110,20 +110,20 @@ ros2 launch moveit_setup_assistant setup_assistant.launch.py
 
 #### Step 1: Click ***"Create New Moveit Configuration Package"*** and select and load the created URDF file "panda.urdf" from first excercise. 
 
-![Step 1](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup1.png)
+![Step 1](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup1.png)
 
 Now you should see a robot model loaded at the right display window
 
-![Step 2](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup2.png)
+![Step 2](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup2.png)
 
 
 #### Step 2: Click Generate Collision Matric
 
-![Step 3](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup3.png)
+![Step 3](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup3.png)
 
 Now you should see a list of link pairs with enable/disable collision and reasons to disable collision
 
-![Step 4](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup4.png)
+![Step 4](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup4.png)
 
 
 
@@ -134,16 +134,16 @@ Now you should see a list of link pairs with enable/disable collision and reason
 * Group Default Planner: None 
 * Click "**Add Joints**"
 
-![Step 5](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup5.png)
+![Step 5](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup5.png)
 
 * Now you should see list of joint names and select the highlighted group of joints and press "**>**" button.
 * Once done, click "**save**".
 
-![Step 6](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup6.png)
+![Step 6](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup6.png)
 
 * Now you should see the added planning group with selected joints in main planning group window
 
-![Step 7](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup7.png)
+![Step 7](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup7.png)
 
 #### Step 4: Define Robot Arm Planning Group
 * Click "**add group**" 
@@ -152,16 +152,16 @@ Now you should see a list of link pairs with enable/disable collision and reason
 * Group Default Planner: None 
 * Click "**Add Links**"
 
-![Step 8](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup8.png)
+![Step 8](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup8.png)
 
 * Now you should see list of link names and select the highlighted group of links and press "**>**" button.
 * Once done, click "**save**".
 
-![Step 9](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup9.png)
+![Step 9](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup9.png)
 
 * Now you should see the added planning group with selected links in main planning group window
 
-![Step 10](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup10.png)
+![Step 10](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup10.png)
 
 #### Step 5: Define Robot Home Pose
 
@@ -170,7 +170,7 @@ Now you should see a list of link pairs with enable/disable collision and reason
 * Select a random valid pose using sliders to set home position.
 
 
-![Step 11](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup11.png)
+![Step 11](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup11.png)
 
 
 #### Step 6: Define Gripper Pose
@@ -179,13 +179,13 @@ Now you should see a list of link pairs with enable/disable collision and reason
 * Select "**hand**" group 
 * Select a random valid pose using sliders to set gripper open position [prefer: 0.0100]
 
-![Step 12](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup12.png)
+![Step 12](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup12.png)
 
 * Name pose as "**close**"**
 * Select "**hand**" group 
 * Select a random valid pose using sliders to set gripper closed position [prefer: 0.0]
 
-![Step 13](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup13.png)
+![Step 13](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup13.png)
 
 #### Step 7: Set End Effectors
 
@@ -194,68 +194,68 @@ Now you should see a list of link pairs with enable/disable collision and reason
 * Select "**panda_link8**" as parent link
 * leave parent group blank
 
-![Step 14](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup14.png)
+![Step 14](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup14.png)
 
 #### Step 8: Skip Passive Joints selection
 
-![Step 15](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup15.png)
+![Step 15](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup15.png)
 
 #### Step 9: ROS2 Control URDF Modification
 
 * Select position as command interface
 * Select position and velocity as state interface
 
-![Step 16](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup16.png)
+![Step 16](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup16.png)
 
 
 #### Step 10: Set up ROS2 Controllers for Robot Arm
 
 * Click "**add controller**" 
 
-![Step 17](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup17.png)
+![Step 17](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup17.png)
 
 * Controller Name: "**panda_arm_controller**"
 * Controller Type: "**joint_trajectory_controller/JointTrajectoryController**"
 * Click "**Add Planning Group Joints**"
 
-![Step 18](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup18.png)
+![Step 18](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup18.png)
 
 * Now you should see list of group names and select the highlighted group and press "**>**" button.
 * Once done, click "**save**".
 
 
-![Step 19](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup19.png)
+![Step 19](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup19.png)
 
 * Now you should see the added ros2 controller and corresponding joint in main ros2 controllers window
 
-![Step 20](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup20.png)
+![Step 20](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup20.png)
 
 #### Step 11: Set up ROS2 Controllers for Hand (Gripper Control)
 
 * Click "**add controller**" 
 
-![Step 20](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup20.png)
+![Step 20](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup20.png)
 
 * Controller Name: "**hand_controller**"
 * Controller Type: "**position_controllers/GripperActionController**"
 * Click "**Add Planning Group Joints**"
 
-![Step 21](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup21.png)
+![Step 21](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup21.png)
 
 * Now you should see list of group names and select the highlighted group and press "**>**" button.
 * Once done, click "**save**".
 
-![Step 22](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup22.png)
+![Step 22](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup22.png)
 
 * Now you should see the added ros2 controller and corresponding joint in main ros2 controllers window
 
-![Step 23](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup23.png)
+![Step 23](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup23.png)
 
 #### Step 12: Set up Moveit Controllers for Robot Arm
 
 * Click "**add controller**" 
 
-![Step 24](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup24.png)
+![Step 24](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup24.png)
 
 
 * Controller Name: "**panda_arm_controller**"
@@ -264,18 +264,18 @@ Now you should see a list of link pairs with enable/disable collision and reason
 * Default: true
 * Click "**Add Planning Group Joints**"
 
-![Step 25](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup25.png)
+![Step 25](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup25.png)
 
 * Now you should see list of group names and select the highlighted group and press "**>**" button.
 * Once done, click "**save**".
 
-![Step 26](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup26.png)
+![Step 26](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup26.png)
 
 #### Step 13: Set up Moveit Controllers for Robot Arm
 
 * Click "**add controller**" 
 
-![Step 26](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup26.png)
+![Step 26](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup26.png)
 
 * Controller Name: "**hand_controller**"
 * Controller Type: "**GripperCommand**"
@@ -283,36 +283,36 @@ Now you should see a list of link pairs with enable/disable collision and reason
 * Default: true
 * Click "**Add Planning Group Joints**"
 
-![Step 27](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup27.png)
+![Step 27](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup27.png)
 
 * Now you should see list of group names and select the highlighted group and press "**>**" button.
 * Once done, click "**save**".
 
-![Step 28](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup28.png)
+![Step 28](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup28.png)
 
 * Now you should see the added moveit controller and corresponding joint in main moveit controllers window
 
-![Step 29](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup29.png)
+![Step 29](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup29.png)
 
 #### Step 14: Skip Perception 3D Sensors
 
-![Step 30](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup30.png)
+![Step 30](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup30.png)
 
 #### Step 15 : Make sure all launch configuration files are selected
 
-![Step 31](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup31.png)
+![Step 31](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup31.png)
 
 #### Step 16 : Add Author Information
 
-![Step 32](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup32.png)
+![Step 32](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup32.png)
 
 #### Step 17: Generate Configuration Files
 
-![Step 33](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup33.png)
+![Step 33](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup33.png)
 
 * Select the location of the package folder and click generate package
 
-![Step 34](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup34.png)
+![Step 34](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup34.png)
 
 Build and verify the moveit package functionality with a demo
 
@@ -330,7 +330,7 @@ ros2 launch panda_moveit_config demo.launch.py
 You should see a simliar window as shown in the image below
 
 
-![Step 35](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup35.png)
+![Step 35](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/moveit_setup/moveit_setup35.png)
 
 To do a simple demo, 
 
@@ -352,7 +352,7 @@ There are three objectives to this exercise
 
 Let's first open the executable to be edited for this exercise
 
-![Folder_img](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/moveit_exe_folder_structure.png)
+![Folder_img](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/moveit_exe_folder_structure.png)
 
 
 
@@ -376,7 +376,7 @@ For this exercise,
 
 Please refer to the template below to understand where editings are needed
 
-![Pose Goal Template](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/pose_goal_template.png)
+![Pose Goal Template](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/pose_goal_template.png)
 
 ### Terminal 1: [Launch Move Group: Move Group will be ready to accept motion plan requests and obstacle additions]
 ```
@@ -402,7 +402,7 @@ ros2 launch panda_moveit_config moveit_rviz.launch.py
 
 Now you should see the below window opened which loads motion planning toolbox, robot model based on robot state publisher information
 
-![Rviz](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/rviz_moveit.png)
+![Rviz](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/rviz_moveit.png)
 
 
 ### Terminal 4: [Launch Moveit Interface: Calls Moveit group with motion plan and collision requests]
@@ -425,7 +425,7 @@ Now you should notice the robot planning (Note: not moving) from current pose to
 
 Please refer to the template below to understand where editings are needed
 
-![Add Collision Template](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/add_collision_template.png)
+![Add Collision Template](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/add_collision_template.png)
 
 
 Please copy below contents to **"Code: add collision objects section here"** 
@@ -509,7 +509,7 @@ Now you should notice the robot planning (Note: not moving) from current pose to
 
 Please refer to the template below to understand where editings are needed
 
-![Add Joint Goal Template](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/joint_goal_template.png)
+![Add Joint Goal Template](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/joint_goal_template.png)
 
 
 Please copy below contents to **"Code: Add Joint Goal section here"** 
@@ -560,7 +560,7 @@ ros2 launch panda_moveit_config moveit_rviz.launch.py
 
 Now you should see the below window opened which loads motion planning toolbox, robot model based on robot state publisher information
 
-![Rviz](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/rviz_moveit.png)
+![Rviz](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/rviz_moveit.png)
 
 
 ### Terminal 4: [Launch Moveit Interface: Calls Moveit group with motion plan and collision requests]
@@ -586,7 +586,7 @@ There are three objectives to this exercise
 
 Let's first open the executable to be edited for this exercise
 
-![Folder_img](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/cam_sim_structure.png)
+![Folder_img](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/cam_sim_structure.png)
 
 
 ### Objective 1: Add Camera Plugin in Gazebo Xacro file
@@ -599,7 +599,7 @@ code cam_sim_pkg/urdf/panda_gazebo.xacro
 ```
 #### Gazebo Structure for Camera Plugin
 
-![gazebo_struc](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/cam_sim_urdf_xacro.png)
+![gazebo_struc](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/cam_sim_urdf_xacro.png)
 
 
 Add the below gazebo tag to the template (panda_gazebo.xacro) based on above gazebo structure reference
@@ -642,7 +642,7 @@ Add the below gazebo tag to the template (panda_gazebo.xacro) based on above gaz
 Add above tag to the below section in panda_gazebo.xacro code
 
 
-![add_tag](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/gazebo_add_tag.png)
+![add_tag](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/gazebo_add_tag.png)
 
 
 ### Objective 2: Include Gazebo Xacro in URDF Xacro file
@@ -661,7 +661,7 @@ Edit the below section of the code with
   * Panda Gazebo Xacro File name
 
 
-![include_tag](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/camera_link_include_gazebo_xacro.png)
+![include_tag](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/camera_link_include_gazebo_xacro.png)
 
 
 ### Objective 3.1: Visualize 3D Pointcloud
@@ -693,7 +693,7 @@ ros2 launch cam_sim_pkg panda_cam_sim.launch.py
 
 Now you should see the window similar to the image below
 
-![gazebo](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/gazebo_depth.png)
+![gazebo](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/gazebo_depth.png)
 
 
 ##### Terminal 2 [Run Joint Commands: Publish Joint Commands to keep the robot arm in zero position] 
@@ -716,28 +716,28 @@ rviz2
 
 Select "world' as fixed frame in RViz
 
-![frame](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/world_frame_selection.png)
+![frame](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/world_frame_selection.png)
 
 Load Robot Model in RViz window
 
 Click "Add" in Displays Tab and select "RobotModel" from "By Display Type"
 
-![toolselect](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/robotmodel_tool_selection.png)
+![toolselect](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/robotmodel_tool_selection.png)
 
 Select "Description Topic" from added RobotModel
 
-![topicselect](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/robot_desc_topic_selection.png)
+![topicselect](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/robot_desc_topic_selection.png)
 
 
 ##### Now Visualize Point Cloud
 
 Click "Add" in Displays Tab and select "/points/PointCloud2" from "By Topic"
 
-![pcselect](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/pointcloud_selection.png)
+![pcselect](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/pointcloud_selection.png)
 
 Now you should see the point cloud similar to the window below
 
-![pointcloud](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/pointcloud_image.png)
+![pointcloud](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/pointcloud_image.png)
 
 
 
@@ -764,7 +764,7 @@ ros2 launch cam_sim_pkg panda_cam_sim.launch.py
 
 Now you should see the window similar to the image below
 
-![gazebo](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/gazebo_camera.png)
+![gazebo](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/gazebo_camera.png)
 
 
 ##### Terminal 2 [Run Joint Commands: Publish Joint Commands to keep the robot arm in zero position] 
@@ -787,28 +787,28 @@ rviz2
 
 Select "world' as fixed frame in RViz
 
-![frame](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/world_frame_selection.png)
+![frame](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/world_frame_selection.png)
 
 Load Robot Model in RViz window
 
 Click "Add" in Displays Tab and select "RobotModel" from "By Display Type"
 
-![toolselect](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/robotmodel_tool_selection.png)
+![toolselect](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/robotmodel_tool_selection.png)
 
 Select "Description Topic" from added RobotModel
 
-![topicselect](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/robot_desc_topic_selection.png)
+![topicselect](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/robot_desc_topic_selection.png)
 
 
 ##### Now Visualize 2D Image
 
 Click "Add" in Displays Tab and select "/my_camera/image_raw/Image" from "By Topic"
 
-![pcselect](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/image_selection.png)
+![pcselect](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/image_selection.png)
 
 Now you should see the window similar to the image below
 
-![image](https://github.com/shalman-khan/ros2_manipulation_training_2023/blob/day1/students_copy/misc_files/2d_image_rviz.png)
+![image](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/2d_image_rviz.png)
 
 
 

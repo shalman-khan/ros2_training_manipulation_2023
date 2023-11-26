@@ -1,0 +1,6 @@
+# Request:marker_id to detect
+# Response: pose of the id, detect status
+int64 marker_id
+---
+geometry_msgs/Pose obj_pose
+bool detect_id

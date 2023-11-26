@@ -1,0 +1,23 @@
+moveit_msgs::msg::CollisionObject workbench_object;
+workbench_object.header.frame_id = "this frame should be based on perception. identify the camera frame with which we get aruco pose. use ros2 topic echo /aruco_markers";
+workbench_object.id = "workbench";
+
+shapes::Mesh * workbench_import_mesh = shapes::createMeshFromResource("package://description_package/meshes/visual/workbench.dae");
+
+shape_msgs::msg::Mesh workbench_mesh;
+shapes::ShapeMsg workbench_mesh_msg;
+shapes::constructMsgFromShape(workbench_import_mesh, workbench_mesh_msg);
+workbench_mesh = boost::get<shape_msgs::msg::Mesh>(workbench_mesh_msg);
+
+workbench_object.meshes.push_back(workbench_mesh);
+
+RCLCPP_INFO(LOGGER, "Add workbench object into the world");
+
+workbench_object.mesh_poses.push_back(workbench_collision_detect.obj_pose);
+workbench_object.operation = workbench_object.ADD;
+
+std::vector<moveit_msgs::msg::CollisionObject> workbench_collision_objects;
+
+workbench_collision_objects.push_back(workbench_object);
+
+planning_scene_interface.addCollisionObjects(workbench_collision_objects);

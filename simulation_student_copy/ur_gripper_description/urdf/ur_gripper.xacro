@@ -1,0 +1,18 @@
+<?xml version="1.0" ?> 
+<robot name="ur_demo" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find robotiq_85_description)/urdf/spawn_gripper.xacro"/>
+  <xacro:include filename="$(find ur_demo_description)/urdf/spawn_ur_robot.xacro"/>
+
+  <link name="world"/>
+
+  <xacro:spawn_ur_robot parent="world" description_package="ur_description" ur_type="ur5e"
+  	initial_positions_file="$(find ur_gripper_description)/config/initial_positions.yaml">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </xacro:spawn_ur_robot>
+
+  <xacro:robotiq_gripper parent="tool0" prefix="" end_effector="robotiq_2f">
+    <origin xyz="0.01 0.0 0.0" rpy="1.57 0.0 0"/>
+  </xacro:robotiq_gripper>
+</robot>
+

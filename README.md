@@ -8,7 +8,7 @@ The objective is to scan three collision objects
 Aruco Tagged Box should be picked from Tray 1 and placed in Tray2
 
 
-[![Watch the video]](https://drive.google.com/file/d/1-mHyQSyAIe6ky_drLt9frTdwkg85A5WK/view?usp=drive_link)
+[![Watch the video](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day4/simulation_student_copy/misc_files/thumbnail.png)](https://drive.google.com/file/d/1-mHyQSyAIe6ky_drLt9frTdwkg85A5WK/view?usp=drive_link)
 
 
 

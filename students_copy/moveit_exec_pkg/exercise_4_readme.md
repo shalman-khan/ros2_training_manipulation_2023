@@ -13,9 +13,9 @@ Let's first open the executable to be edited for this exercise
 ![Folder_img](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/ex4_folder_struc.png)
 
 
-For this exercise you will be provided with a logitech C270 camera
-1)Restart your Virtual Machine
-2)Add Logitech C270 using settings->usb
+### For this exercise you will be provided with a logitech C270 camera
+1) Restart your Virtual Machine
+2) Add Logitech C270 using settings->usb
 
 ### Objective 1:  Write a client request funcion to get Aruco Marker Position
 

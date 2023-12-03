@@ -1,4 +1,4 @@
-## ROS-I Manipulation Training Day 1 Exercise 4: Visualize image (and) 3D pointcloud using camera plugin in gazebo and rviz
+## ROS-I Manipulation Training Day 1 Exercise 5: Visualize image (and) 3D pointcloud using camera plugin in gazebo and rviz
 
 There are three objectives to this exercise
 

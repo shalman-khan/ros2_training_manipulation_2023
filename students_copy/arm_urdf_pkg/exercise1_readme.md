@@ -2,7 +2,7 @@
 
 There are two objectives to this exercise
 
-1) Add the right joint for the gripper and visualize the robot arm in RViz
+1) Add the right joints, parent and child links for the robot arm and gripper and visualize the robot arm in RViz
 2) Add a table, camera and visualize in RViz
    
 ![Exercise1](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/Exercise1_image1.png)
@@ -27,6 +27,11 @@ Now you should notice a urdf file similar to the one shown below
 
 ![Urdf_img](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/urdf_file_image.png)
 
+Move to the **<panda_joint1>** tag. Look for **IDENTIFY_JOINT_TYPE**, **IDENTIFY_PARENT_LINK**, **IDENTIFY_CHILD_LINK** and fill them
+
+![Identify_joint_robot_links](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/ex1_identify_joint_parent_child.png)
+
+
 Move to the **<panda_finger_joint1>** and **<panda_finger_joint2>** tags
 
 ![Identify_joint](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/joint_type.png)
@@ -37,8 +42,7 @@ Once done, now it is time to visualize your robot description file in RViz.
 Before visualizing, you should build and source to visualize the changes. 
 
 ```
-docker compose run shell
-cd day1_ws
+cd ~/day1_ws
 colcon build --packages-select arm_urdf_pkg
 source install/setup.bash
 ros2 launch arm_urdf_pkg robot_arm_visual.launch.py
@@ -61,7 +65,7 @@ Scroll down to the same **panda.urdf** file
 1) Step 1: Create a link with name "table"
 2) Step 2: Define Visual Component with origin **[rpy="1.57 0 0" xyz="0 0 0"]**
 3) Step 3: Define Geoemtry with mesh file "workbench.dae" located in meshes/visual folder of the package.
-4) Step 4: Repeat Step 1 to Step 3 for Collision Component.
+4) Step 4: Repeat Step 1 to Step 3 for Collision Component.[mesh_file: camera_d435.dae]
 5) Step 5: Create a joint with name "table_link_joint" and type "fixed"
 6) Step 6: Define origin **rpy="0 0 0"** and determine **xyz** for the joint [hint: Table height from its origin -> 0.468m]
 7) Step 7: Define Parent link as "table" and Child link as "panda_link0". 
@@ -69,20 +73,18 @@ Scroll down to the same **panda.urdf** file
 ### Add Camera Link and Joint
 
 1) Step 1: Create a link with name "camera_link"
-2) Step 2: Define Visual Component with origin **[rpy="1.57 0 1.57" xyz="0.0 0 0.0"]**
-3) Step 3: Define Geoemtry with mesh file "workbench.dae" located in meshes/visual folder of the package.
-4) Step 4: Repeat Step 1 to Step 3 for Collision Component.
-5) Step 5: Create a joint with name "base_to_static_camera" and type "fixed"
-6) Step 6: Define joint origin **[rpy="0 0 0" xyz="1.0 0 1.0"]**
-7) Step 7: Define Parent link as "panda_link0" and Child link as "camera_link".
+3) Step 2: Define Geoemtry with mesh file "camera_d435.dae" located in meshes/visual folder of the package.
+4) Step 3: Repeat Step 1 and Step 2 for Collision Component [mesh_file: camera_d435.stl]
+5) Step 4: Create a joint with name "base_to_static_camera" and type "fixed"
+6) Step 5: Define joint origin **[rpy="1.57 0 1.57" xyz="1.0 0 1.0"]**
+7) Step 6: Define Parent link as "panda_link0" and Child link as "camera_link".
 
 
 Once done, now it is time to visualize your robot description file in RViz. 
 Before visualizing, you should build and source to visualize the changes. 
 
 ```
-docker compose run shell
-cd day1_ws
+cd ~/day1_ws
 colcon build --packages-select arm_urdf_pkg
 source install/setup.bash
 ros2 launch arm_urdf_pkg robot_arm_visual.launch.py

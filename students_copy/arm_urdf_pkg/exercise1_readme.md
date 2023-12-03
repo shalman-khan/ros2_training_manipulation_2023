@@ -27,7 +27,7 @@ Now you should notice a urdf file similar to the one shown below
 
 ![Urdf_img](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/urdf_file_image.png)
 
-Move to the **<panda_joint1>** tag. Look for **IDENTIFY_JOINT_TYPE**, **IDENTIFY_PARENT_LINK**, **IDENTIFY_CHILD_LINK** and fill them
+Move to the **<panda_joint1>** tag. Look for **IDENTIFY_JOINT_TYPE**, **IDENTIFY_PARENT_LINK**, **IDENTIFY_CHILD_LINK** all over the file and fill them
 
 ![Identify_joint_robot_links](https://github.com/shalman-khan/ros2_training_manipulation_2023/blob/day1/students_copy/misc_files/ex1_identify_joint_parent_child.png)
 

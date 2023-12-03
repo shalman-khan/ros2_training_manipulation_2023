@@ -3,7 +3,7 @@
 
 There are three objectives to this exercise
 
-1) Write a client request funcion to get Aruco Marker Position
+1) Write a client request function to get Aruco Marker Position
 2) Call the detect_collision_object to get Marker pose
 3) Create a box for following dimensions and use the detected pose as box pose
 

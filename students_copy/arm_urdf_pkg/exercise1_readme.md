@@ -15,7 +15,7 @@ mkdir -p ~/day1_ws/src
 cp -r <day1_contents> ~/day1_ws/src
 ```
 
-## Objective 1: Add the right joint for the gripper and visualize the robot arm 
+## Objective 1: Add the right joints, parent and child links for the robot arm and gripper and visualize the robot arm in RViz
 use gedit or code to open code editors
 
 ```

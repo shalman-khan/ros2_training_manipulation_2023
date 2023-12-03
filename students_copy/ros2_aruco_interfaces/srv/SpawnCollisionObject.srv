@@ -1,0 +1,5 @@
+# Request:None
+# Response: pose of the id, detect status
+---
+geometry_msgs/Pose obj_pose
+bool detect_id

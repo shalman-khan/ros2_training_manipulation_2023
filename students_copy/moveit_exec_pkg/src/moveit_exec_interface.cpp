@@ -12,17 +12,27 @@ static const rclcpp::Logger LOGGER = rclcpp::get_logger("movet_exec_interface");
 
 int main(int argc, char** argv)
 {
+
+  //  Initializes the ROS C++ client library
   rclcpp::init(argc, argv);
+
+  // Options to customize the behavior of the node
   rclcpp::NodeOptions node_options;
+
+  // Sets an option for the node to automatically declare parameters from overrides [Node name: movet_exec_interface]
   node_options.automatically_declare_parameters_from_overrides(true);
   auto move_group_node = rclcpp::Node::make_shared("movet_exec_interface", node_options);
 
-  // We spin up a SingleThreadedExecutor for the current state monitor to get information
+  // Spins up a SingleThreadedExecutor for the current state monitor to get information
   // about the robot's state.
   rclcpp::executors::SingleThreadedExecutor executor;
-  executor.add_node(move_group_node);
-  std::thread([&executor]() { executor.spin(); }).detach();
 
+  // Adds the node to executor
+  executor.add_node(move_group_node);
+
+  // Detach makes the thread to run individually in the background 
+  std::thread([&executor]() { executor.spin(); }).detach();
+  
   ///////////////////////////////////////////////////////////////////
   // OBJECTIVE 1: Planning to a POSE GOAL 
   // 1) Identify the planning group name defined in the panda_moveit_pkg 
@@ -32,33 +42,31 @@ int main(int argc, char** argv)
 
   // Planning group Definition: To plan and control specfic set of joints defined in the planning group
   // 1) Identify the planning group name defined in the panda_moveit_pkg 
-  static const std::string PLANNING_GROUP = "identify planning group";
 
-  moveit::planning_interface::MoveGroupInterface move_group(move_group_node, PLANNING_GROUP);
+  // CODE HERE
 
   // Define Joint Model Group to extract the set of joints to control from specific planning group
-  const moveit::core::JointModelGroup* joint_model_group =
-      move_group.getCurrentState()->getJointModelGroup(PLANNING_GROUP);
+  // CODE HERE
 
   // Class to describe the Planning Scene [Helps to add objects to the planning environment]
-  moveit::planning_interface::PlanningSceneInterface planning_scene_interface;
+  // CODE HERE
 
 
   // Current set of Joint Values
-  moveit::core::RobotStatePtr current_state = move_group.getCurrentState(10);
+  // CODE HERE
 
   // 2) Use the "geometry_msgs::msg::Pose" to define the Target pose
   // Refer: https://docs.ros2.org/latest/api/geometry_msgs/msg/Pose.html
   // Define position-> [x: 0.7, y:0.0; z:0.97] orientation->[w:0.0, x:-1.0, y:0.0, z:0.0]
   //  Target Pose Defintion 
-  geometry_msgs::msg::Pose pose_goal;
+  // CODE HERE
   // Code: add the Pose Goal here  
   // ......................
   // ......................
   // ......................
 
   // Set the Target Pose
-  move_group.setPoseTarget(pose_goal);
+  // CODE HERE
 
 
   ///////////////////////////////////////////////////////////////////
@@ -80,12 +88,12 @@ int main(int argc, char** argv)
   //////////////////////////////////////////////////////////////////
 
   //  Planning the plan and Visualization [Not MOVE]
-  moveit::planning_interface::MoveGroupInterface::Plan moveit_plan;
+  // CODE HERE
 
   // Ackowledgement to verify the plan's success
-  bool ack = (move_group.plan(moveit_plan) == moveit::core::MoveItErrorCode::SUCCESS);
 
-  RCLCPP_INFO(LOGGER, "Visualizing POSE GOAL plan %s", ack ? "" : "Unsuccessful");
+  // CODE HERE
+
 
   // Before this step: Planning is Completed
   // The following step executes the plan

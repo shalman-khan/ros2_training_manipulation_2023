@@ -45,4 +45,23 @@ ament_target_dependencies(
 install(TARGETS moveit_exec_interface
   DESTINATION lib/${PROJECT_NAME})
 
+#add_executable(moveit_spawn_collision_object src/moveit_spawn_collision_object.cpp)
+#target_include_directories(moveit_spawn_collision_object PUBLIC
+#  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+#  $<INSTALL_INTERFACE:include>)
+#target_compile_features(moveit_spawn_collision_object PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17
+#ament_target_dependencies(
+#  moveit_spawn_collision_object
+#  "moveit_ros_planning_interface"
+#  "rclcpp"
+#  "shape_msgs"
+#  "geometric_shapes"
+#  "moveit_visual_tools"
+#  "shape_msgs"
+#  "ros2_aruco_interfaces"
+#)
+#
+#install(TARGETS moveit_spawn_collision_object
+#  DESTINATION lib/${PROJECT_NAME})
+
 ament_package()

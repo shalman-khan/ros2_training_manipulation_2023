@@ -170,7 +170,7 @@ int main(int argc, char** argv)
   // <ADD COLLISION OBJECT TO PLANNING INTERFACE>
 
   ///////////////////////////////////////////////////////////////////
-  // OBJECTIVE 3.1: Detect the Aruco Pick Box  
+  // OBJECTIVE 3: Detect the Aruco Pick Box  
   // 1) Move Robot to defined "tray1_pose"  
   // 2) Scan Aruco Tag to generate Aruco Box as collision object
   // MARKER ID for box: 25
@@ -192,7 +192,7 @@ int main(int argc, char** argv)
   ///////////////////////////////////////////////////////////////////
 
   ///////////////////////////////////////////////////////////////////
-  // OBJECTIVE 3.2: Pick the detected Aruco Box
+  // OBJECTIVE 4.1: Pick the detected Aruco Box
   // 1) Make sure Gripper is open before executing the plan
   // 2) Use detected pose to generate cartesian path plan to pick the box [refer to day3 exercise 6 pick_and_place.cpp for cartesian plan]
   // 3) Move Robot to defined "tray1_pose" with picked object
@@ -204,7 +204,7 @@ int main(int argc, char** argv)
 
   
   ///////////////////////////////////////////////////////////////////
-  // OBJECTIVE 3.3: Place the picked Aruco Box in tray2
+  // OBJECTIVE 4.2: Place the picked Aruco Box in tray2
   // 1) Move Robot to defined "tray2_pose" with picked object
   // 2) Place Box in the center of Tray 2
   // 3) Move Robot back to "tray2_pose" after placing

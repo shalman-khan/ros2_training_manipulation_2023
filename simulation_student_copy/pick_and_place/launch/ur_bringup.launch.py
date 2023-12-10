@@ -105,12 +105,12 @@ def generate_launch_description():
                        '-0.7007529276596157', 'tool0', 'camera_link']
     ))
 
-    # ld.add_action(Node(
-    #         package='ros2_aruco',
-    #         executable='aruco_node',
-    #         name='aruco_node',
-    #         output='screen'
-    # ))
+    ld.add_action(Node(
+            package='ros2_aruco',
+            executable='aruco_node',
+            name='aruco_node',
+            output='screen'
+    ))
 
     return ld
 

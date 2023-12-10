@@ -110,45 +110,17 @@ CollisionServiceResult detect_collision_object(
 int main(int argc, char** argv)
 {
   ///////////////////////////////////////////////////////////////////
-  // OBJECTIVE 0: Refer to Day 3 Exercise 6 pick_and_place.cpp for initialization
+  // OBJECTIVE 0: Initialization ROS2, Move Group
 
   ////////////////////////////////////////////////////////////////////
 
-  // Initialize the ROS 2 client library
 
-  // Create node options
-
-  // Automatically declare parameters from overrides
-
-  // Create a ROS 2 node for Move group interface
-
-  // Create an executor to handle node execution
-
-  // Add the Move group interface node to the executor
-
-  // Start a separate thread to spin the executor
-
-  // Create a separate ROS 2 node for the gripper client
-
-
-
-  // Define Planning Groups
-
-  // Define Move group with defined Planning Group
-
-  // Move Group Planner Selection 
-
-
-
-  // Define Planning scene interface
-
-  // Define Joint Model Group with defined Planning Group
-
-  // Define the plan using planning interface
 
   ///////////////////////////////////////////////////////////////////
   // OBJECTIVE 1: Move Robot to defined "tray1_pose" as starting position [open gripper at initial step]
   // 1) Scan Aruco Tag to generate Tray 1 as collision object
+  // MARKER ID for tray1: 35
+  // MESH FILE LOCATION: robotiq_85_description/meshes/visual/tray.dae
 
   ////////////////////////////////////////////////////////////////////
 
@@ -177,11 +149,12 @@ int main(int argc, char** argv)
   ///////////////////////////////////////////////////////////////////
   // OBJECTIVE 2: Move Robot to defined "tray2_pose"  
   // 1) Scan Aruco Tag to generate Tray 2 as collision object
-
+  // MARKER ID for tray2: 25
+  // MESH FILE LOCATION: robotiq_85_description/meshes/visual/tray.dae
   ////////////////////////////////////////////////////////////////////
 
   // CODE HERE:
-   ///////////////////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////
   ///////////////////////////////////////////////////////////////////
 
   // <SET NAMED TARGET AND MOVE TO "tray2_pose". Refer to below link
@@ -200,7 +173,8 @@ int main(int argc, char** argv)
   // OBJECTIVE 3.1: Detect the Aruco Pick Box  
   // 1) Move Robot to defined "tray1_pose"  
   // 2) Scan Aruco Tag to generate Aruco Box as collision object
-
+  // MARKER ID for box: 25
+  // No Mesh use box primitive
   ////////////////////////////////////////////////////////////////////
 
 
@@ -213,7 +187,9 @@ int main(int argc, char** argv)
   // define a box similar to the one in Day3 Excercise 6 pick_and_place.cpp
   //Set the box dimensions to 0.065m(x), 0.119m(y), 0.04m(z)
 
-
+  // CODE HERE:
+  ///////////////////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////
 
   ///////////////////////////////////////////////////////////////////
   // OBJECTIVE 3.2: Pick the detected Aruco Box
@@ -222,19 +198,33 @@ int main(int argc, char** argv)
   // 3) Move Robot to defined "tray1_pose" with picked object
 
   ////////////////////////////////////////////////////////////////////
- // CODE HERE:
+  // CODE HERE:
+  ///////////////////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////
 
-
+  
   ///////////////////////////////////////////////////////////////////
   // OBJECTIVE 3.3: Place the picked Aruco Box in tray2
-  // 1) Make sure Gripper is open before executing the plan
-  // 2) Use detected pose to generate cartesian path plan to pick the box [refer to day3 exercise 6 pick_and_place.cpp for cartesian plan]
-  // 3) Move Robot to defined "tray1_pose" with picked object
+  // 1) Move Robot to defined "tray2_pose" with picked object
+  // 2) Place Box in the center of Tray 2
+  // 3) Move Robot back to "tray2_pose" after placing
 
   ////////////////////////////////////////////////////////////////////
 
- // CODE HERE:
+  // CODE HERE:
+  ///////////////////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////
 
+
+  ///////////////////////////////////////////////////////////////////
+  // OBJECTIVE 3.4: Modify Code to Repeat the Pick and Place Sequence
+
+  ////////////////////////////////////////////////////////////////////
+
+  // CODE HERE:
+  ///////////////////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////
+  
   rclcpp::shutdown();
   return 0;
 }
